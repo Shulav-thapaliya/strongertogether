@@ -1,0 +1,24 @@
+
+<!DOCTYPE html>
+{%load static%}
+<html>
+    <head>
+       
+        <title>Comment form</title>
+        <link rel="stylesheet" href="{% static 'comment.css' %}">
+    </head>
+    <body>
+        <div class = "formcontainer">
+            <form  class = "form" action=""method= "POST">
+                {% csrf_token %}
+                
+                {{newform}}
+                
+                <input class = "but" type = "submit">
+            </form> 
+        </div> 
+        
+        <script src="" async defer></script>
+    </body>
+</html>
+
