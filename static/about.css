@@ -1,0 +1,43 @@
+.main {
+    display: flex;
+    background-color: yellow;
+}
+
+.body {
+    background-color: aqua;
+}
+
+.main-img {
+    position: absolute;
+    right: 100px;
+    bottom: -200px;
+    width: 600px;
+    border-radius: 60px;
+}
+
+.par {
+    width: 50rem;
+    margin-left: 10rem;
+    position: absolute;
+    bottom: -100px;
+    size: 200px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 2rem;
+    letter-spacing: 0.2rem;
+    font-weight: 900;
+    text-align: center;
+}
+
+.main-head {
+    z-index: 1000;
+    position: absolute;
+    bottom: 400px;
+    right: 550px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 80px;
+    letter-spacing: 2rem;
+    font-weight: 900;
+    text-align: center;
+    text-shadow: 0.3rem 0.3rem 0.3rem;
+    color: black;
+}

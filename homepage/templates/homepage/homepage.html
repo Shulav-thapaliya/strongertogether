@@ -11,28 +11,31 @@
         <link rel="stylesheet" href="{% static 'styles.css' %}">
     </head>
     <body>
-        {% comment %} nav bar  {% endcomment %}
-        <nav class = "navbar target">
-            <a href = "test" class = "nav-link">
-                <span class = "nav-head"> GET HELP</span>
-            </a>
-            <a href = "#" class = "nav-link">
-                <span class = "nav-head"> GALLERY </span>
-            </a>
-            <a href = "story" class = "nav-link">
-                <span class = "nav-head"> SHAREYOURRSTORY </span>
-            </a>
+        <div class = "main-div">
 
-        </nav>
-        <div class = "menu target">
-            
-        </div>
-            
-        
+            {% comment %} nav bar  {% endcomment %}
+            <nav class = "navbar target">
+                <a href = "{% url 'test' %}" class = "nav-link">
+                    <span class = "nav-head"> GET HELP</span>
+                </a>
+                <a href = "{% url 'aboutus' %}" class = "nav-link">
+                    <span class = "nav-head"> ABOUT US </span>
+                </a>
+                <a href = "{% url 'story' %}" class = "nav-link">
+                    <span class = "nav-head"> TALES </span>
+                </a>
+    
+            </nav>
 
+            {% comment %} this section is for the icon in the front page {% endcomment %}
+           
 
-        {% comment %} end of nav bar {% endcomment %}
-        <div class = "container">
+            <img class ="main-icon" src = "{% static 'logo.jpg'%}">
+
+            {% comment %} This is for the heading of the website  {% endcomment %}
+            <h1 class = "section1heading">STRONGER TOGETHER</h1>
+
+            {% comment %} this is for the other part of the main page {% endcomment %}
             <section class = "section1">
                 {% comment %} pop up div {% endcomment %}
                 <div class = "popup listen">
@@ -53,14 +56,27 @@
     
                 </div>
                 {% comment %} end of pop up div  {% endcomment %}
-                <h1 class = "section1heading">STRONG TOGETHER</h1>
+
+                {% comment %}  This is for the main page   {% endcomment %}
+                
                 <div class = "section1div">
-                    <h1 class = "divheading change"> WE ARE HERE </h1>
-                    <h1 class = "divheading">  </h1>
+                    <h1 class = "divheading change"> STRONGER TOGETHER </h1>
+                    <h1 class = "divheading"> WE ARE HERE </h1>
                     <h1 class = "divheading"> WE ARE LISTENING </h1>
                     <h1 class = "divheading"> WE ARE ACTIVE</h1> 
                 </div>
             </section>
+        
+        
+
+            
+        </div>
+            
+        
+
+
+        
+            
 
             
             
@@ -73,93 +89,8 @@
 
 
             {% comment %} section2 about us  {% endcomment %}
-            <section class = "section2">
-                <h1 class = "section2heading">ABOUT US </h1>
-                <div class = "container1">
-                    <a href = "#" class = "containerlink"> 
-                        <img src= "{% static 'black.jpg'%}" class = "containerimage" >
-                        <h1 class = container1heading> PURPOSE </h1>
-                        <p class = "containerparagraph">Simply, our purpose is to begin the conversation, it’s to make perpetrators think twice before they make the wrong decision, it’s to educate about what has been kept silent and to reach out to those who need someone. 
-
-
-
-                            We are here for you - we are an active page that involves a small number of people who are devoted to help those who reach out. 
-                            
-                            
-                            
-                            We are listening to you - we are smaller than a hand full of people who are great listeners and are always ready to be all ears when needed. 
-                            
-                            
-                            
-                            We are active - we will not stay idle when it comes to issues you have raised. We will address them in our best possible way and push you towards resolving it through the best means. 
-                            
-                            
-                            
-                            WE ARE HERE, WE ARE LISTENING AND WE ARE ACTIVE. 
-                            
-                            </p>
-                    </a>
-                    <a href = "#" class = "containerlink"> 
-                        <img src= "{% static 'wall.jpg'%}" class = "containerimage">
-                        <h1 class = container1heading>VISION</h1>
-                        <p class = "containerparagraph">STRONGER TOGETHER 
-
-
-
-                            STRONGER TOGETHER is more than just an organisation - it is a safe space for EVERYONE to talk about their issues, what they believe strongly about and raise awareness while giving power to the voiceless. 
-                            
-                            
-                            
-                            We are OPEN to EVERYONE - LGBTQ2S+ (Lesbian, Gay, Bisexual, Transgender, Queer or Questioning and Two-Spirit) Women, Men and other. 
-                            
-                            
-                            
-                            With frequent events involving: informative sessions, educational workshops, the use of creative arts therapy (dance, art, music, writing, meditation), retreats, campaigns we aim to focus on the issues revolving around Mental Health and wellbeing including depression, anxiety, stress, sexual harassment (consent, bad touch, sexual health, prevention) and anything and everything that alters our physical, emotional, psychological and social well-being. 
-                            
-                            
-                            
-                            WE ARE HERE, WE ARE LISTENING AND WE ARE ACTIVE. 
-                            
-                            
-                            
-                            If you have anything you wish to discuss about please do not hesitate to contact us. 
-                            
-                            Once we have our anonymous portal ready, we hope more of you can share your experiences, awareness and anything you have to say with us so more people are not victims to what you may be experiencing or have been experiencing. 
-                            
-                            
-                            
-                            **Please be advised that we take the Australian Laws very seriously and align our activities in consideration to the privacy of both parties (victim and abusers) to full effect. 
-                            
-                            
-                            
-                            THIS IS NOT A NAME AND SHAME PORTAL - ALL INVESTIGATIVE MEASURES WILL BE TAKEN TO ENSURE THAT FALSE ACCUSATIONS ARE NOT MADE. 
-                            
-                            As we are a new group, we will be slowly organising our page to become fully active in a few weeks time.  </p>
-                    </a>
-                    
-                </div>    
-            <section class = "section3">
-                <h1 class = "section2heading">TEAM MEMBERS </h1>
-                <div class = "section3div">
-                    <img src= "{% static 'shreya1.png'%}" class = "container3image" >
-                    <p class = "containerparagraph2">HELLO AND NAMASTEY! I AM SHREYA AND I AM STUDYING BACHELORS OF PSYCHOLOGY AT CURTIN UNIVERISTY.I AM PASSIONATE ABOUT MANY THINGS IN LIFE BUT BEING COMPASSIONATE TO ALL LIVING BEINGS TOPS IT ALL. I ENJOY DANCING,DRAWING AND EXPLORING NEW HIKING PLACES AROUND PERTH.HAVING SPENT HALF OF MY CHILDHOOD IN NEPAL,<br>I FEEL DEEPLY CONNECTED TO MY NEPALI ROOTS AND IN THE FUTURE,I HOPE TO WORK IN THE MENTAL HEALTH SECTOR IN NEPAL.BY BEING PART OF THIS GROUP,I HOPE TO ADVOCATE FOR THE IMPORTANCE OF MENTAL HEALTH AND PROVIDE A SAFE AND NON -JUDGMENTAL PLATFORM FOR EVERYONE.</p>
-                </div>
-                <div class = "section3div">
-                    <img src= "{% static 'sarina-modified.png'%}" class = "container3image" >
-                    <p class = "containerparagraph2">HEY! IAM SARINA AND IAM STUDYING LABORATORY MEDICINE AT CURTIN UNIVERISTY.IAM AN ENTHUSIASTIC PERSON WHEN IT COMES TO DOING SOMETHING I LOVE AND THINK SO HIGHLY OF.IN MY FREE TIME I ENJOY GOING OUT TO EAT AT NEW PLACES AND EXPLORING WHAT ELSE PERTH HAS TO OFFER!<br>BY BEING PART OF THIS GROUP,I WISH TO CREATE A COMMUNITY WHERE EVERYONE KNOWS THAT THERE IS SOMEONE OUT THERE WHO CAN DEFINITELY HELP YOU AND BE THERE FOR YOU</p>
-                    
-                </div>
-                <div class = "section3div">
-                    <img src= "{% static 'aliza.png'%}" class = "container3image" >
-                    <p class = "containerparagraph2">Hello everyone. My name is Aliza and I am a community services graduate. I feel like growth is dynamic and every time I introduce myself to people, it changes every now and then. I am an ambivert, depending upon the situation, inquisitive, easy to talk to, and someone who yearns to see the power of positivity around the world. Literature, music, novels, and coffee is what keeps me going all around. I wish to utilise my knowledge and experience in order to create a little hope of change within the community.</p>
-                    
-                </div>
-
-
-
-
-            </section>        
-        </div>
+            
+           
         
         
         

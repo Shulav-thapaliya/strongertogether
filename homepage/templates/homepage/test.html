@@ -11,13 +11,16 @@
         <link rel="stylesheet" href="{% static 'test.css'%}">
     </head>
     <body>
+        {% block content %}
+        {% include 'homepage/navbar.html' %}
+        {% endblock content %}
         <section class = "section1">
 
             <div class = "photocont">
-                <img class = "contimg1" src = "{% static '1.jpg'%}">
-                <img class = "contimg1" src = "{% static '2.jpg'%}">
-                <img class = "contimg1" src = "{% static '3.jpg'%}">
-                <img class = "contimg1" src = "{% static '5.jpg'%}">
+                <img class = "contimg1" src = "{% static 'logo10.jpg'%}">
+                <img class = "contimg1" src = "{% static 'logo2.jpg'%}">
+                <img class = "contimg1" src = "{% static 'team.jpg'%}">
+                <img class = "contimg1" src = "{% static 'logo9.jpg'%}">
                 {% comment %} <img class = "contimg1" src = "{% static '4.jpg'%}">
                 <img class = "contimg1" src = "{% static '7.jpg'%}">
                 <img class = "contimg1" src = "{% static '8.jpg'%}">
@@ -26,7 +29,7 @@
             
             </div>   
             <div class = "formcontainer">
-                <h1 class = "formhead"> DO NOT HESITATE </h1>
+                
                 <form  class = "form" action=""method= "POST">
                     {% csrf_token %}
                     

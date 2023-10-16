@@ -53,6 +53,20 @@ def comform(request):
 # end of database page function
 
 
-    
+# this is for the about us page of the website 
+
+def about(request):
+    return render (request, 'homepage/about.html')
+
    
 
+def com(request,pk):
+    # form has been added 
+    
+
+    
+
+    dataBase = share.objects.get(Privacy='Y',id=pk)
+    y = {'data':dataBase}
+
+    return render(request,'homepage/com.html',y)

@@ -5,48 +5,59 @@
 <html>
     <head>
         
-        <title>story</title>
+    <title>story</title>
         
-        <link rel="stylesheet" href="{% static 'story.css' %}">
+    <link rel="stylesheet" href="{% static 'story.css' %}">
     </head>
     <body>
-        <h1 class= "heading"> STORY</h1>
-   
-        <div class = "storycontainer">
+        {% block content %} 
+        {% include 'homepage/navbar.html' %} 
+        {% endblock content %} 
         
-        {%for i in data%}
-            <div class = "all">
-                <div class = "photoBoth">
-                    {% if i.gender == 'M'%}
-                        <img src="{%static 'man.png'%}" class = "icon"> 
-                    {% elif i.gender == 'F'%}
-                        <img src="{%static 'woman.png'%}" class = "icon">
-                    {% endif %}
-                    <h1 class = "title">{{i.Name}}</h1>
-                </div>
-                <div class ="story">
-                    <img src="{%static 'flower-bouquet.png'%}" class = "icon2"> 
-                    <p class = "par"> {{i.Story}}</p>
+    <div class = "master"> 
+
+        <div class = "storycontainer">
+            <h1 class= "heading"> Tales Untold</h1>
+        
+            {%for i in data%}
+                <div class = "all">
+                    <div class = "photoBoth">
+                        {% if i.gender == 'M'%}
+                            <img src="{%static 'man.png'%}" class = "icon"> 
+                        {% elif i.gender == 'F'%}
+                            <img src="{%static 'woman.png'%}" class = "icon">
+                        {% endif %}
+                        <h1 class = "title">{{i.Name}}</h1>
+                        <h1 class = "title">{{i.id}}</h1>
+                        <a  class = "comment" href = "{%url 'comment' i.id %}">comment</a>
                     
-                </div>
-                
-                <div class = "commentContainer">
-                    {% for y in i.comment_set.all%}
+                    
+                   
+                    </div>
+                    <div class ="story">
+                        <img src="{%static 'flower-bouquet.png'%}" class = "icon2"> 
+                        <p class = "par"> {{i.Story}}</p>
+                    </div>
+                    <div class = "commentContainer">
+                        {% for y in i.comment_set.all%}
 
                         <div class = "commentdiv">
                             <img src="{%static 'sunflower.png'%}" class = "icon2">
                             <p class = "comments">{{y.comment}}</p><br>
                             
                         </div>
-                    {% endfor %}
+                        {% endfor %}
+                    </div>
+                {% endfor %}
                 </div>
-        {% endfor %}
-        <button class = "button1"> ViewComment</button>
-        <a  class = "commentform" href = "{%url 'formpage'%}">AddComment</a>
+            
+            </div>
+                <button class = "button1"> ViewComment</button>
+                <a  class = "commentform" href = "{%url 'newform'%}">AddComment</a>
     
         
 
-        
+    </div>
         <script src="{% static 'story.js' %}"></script>
        
         

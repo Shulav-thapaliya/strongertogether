@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+{%load static%}
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Its not ok</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="{% static 'styles.css' %}">
+    </head>
+    <body>
+
+            {% comment %} nav bar  {% endcomment %}
+            <nav class = "navbar target">
+                <a href = "{% url 'test' %}" class = "nav-link">
+                    <span class = "nav-head"> GET HELP</span>
+
+                <a href = "{% url 'aboutus' %}" class = "nav-link">
+                    <span class = "nav-head"> ABOUTUS </span>
+                </a>
+                <a href = "{% url 'story' %}" class = "nav-link">
+                    <span class = "nav-head"> TALES </span>
+                </a>
+                <a href = "{% url 'home' %}" class = "nav-link">
+                    <span class = "nav-head"> HOME </span>
+                </a>
+    
+            </nav>
+        </body>

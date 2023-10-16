@@ -8,6 +8,9 @@
         <link rel="stylesheet" href="{% static 'comment.css' %}">
     </head>
     <body>
+        {% block content %}
+        {% include 'homepage/navbar.html' %}
+        {% endblock content %}
         <div class = "formcontainer">
             <form  class = "form" action=""method= "POST">
                 {% csrf_token %}

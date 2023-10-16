@@ -1,0 +1,12 @@
+<h1> hello</h1>
+{% for y in data.comment_set.all%}
+
+    <div class = "commentdiv">
+        
+        <p class = "comments">{{y.comment}}</p><br>
+                            
+    </div>
+{% endfor %}
+
+
+<h1>{{ data.comment }}</h1>

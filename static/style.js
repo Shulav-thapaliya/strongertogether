@@ -1,11 +1,5 @@
 // navigation bar 
 
-document.querySelector('.menu').addEventListener('click', () => {
-    document.querySelectorAll('.target').forEach((newitem) => {
-        newitem.classList.toggle('change')
-    })
-
-})
 
 
 

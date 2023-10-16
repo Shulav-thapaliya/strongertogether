@@ -7,13 +7,17 @@
     
     .formcontainer {
         position: absolute;
-        background-color: #f6fafa;
+        background-color: #91C8E4;
         padding: 10rem;
         border-radius: 20px;
         border-color: black;
         box-shadow: 5px 5px 15px 5px #000000;
-        right: 2rem;
+        right: 20rem;
         bottom: -27rem;
+        top: 20rem;
+        height: 60rem;
+        background-image: url('strong.jpg');
+        background-size: cover;
     }
     
     .sectionheading {
@@ -24,11 +28,11 @@
     }
     
     .form {
-        color: #a7895e;
+        color: black;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        font-weight: 400;
+        font-weight: 800;
         width: 22rem;
         height: 25rem;
         font-size: 20px;
@@ -39,7 +43,7 @@
     .contimg1 {
         width: 20rem;
         border-radius: 17px;
-        box-shadow: 2px #062C30;
+        box-shadow: 10px #062C30;
         transition: transform 0.2s;
     }
     
@@ -49,6 +53,9 @@
     
     .photocont {
         width: 50rem;
+        position: absolute;
+        right: 60rem;
+        margin-top: 5rem;
     }
     
     .formhead {
