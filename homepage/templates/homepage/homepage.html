@@ -1,76 +1,64 @@
-
 <!DOCTYPE html>
-{%load static%}
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Its not ok</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="{% static 'styles.css' %}">
-    </head>
-    <body>
-        <div class = "main-div">
+{% load static %}
+<html lang="en">
 
-            {% comment %} nav bar  {% endcomment %}
-            <nav class = "navbar target">
-                <a href = "{% url 'test' %}" class = "nav-link">
-                    <span class = "nav-head"> GET HELP</span>
-                </a>
-                <a href = "{% url 'aboutus' %}" class = "nav-link">
-                    <span class = "nav-head"> ABOUT US </span>
-                </a>
-                <a href = "{% url 'story' %}" class = "nav-link">
-                    <span class = "nav-head"> TALES </span>
-                </a>
-    
-            </nav>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Its not ok</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+</head>
 
-            {% comment %} this section is for the icon in the front page {% endcomment %}
-           
+<body>
+    <div class="container">
 
-            <img class ="main-icon" src = "{% static 'logo.jpg'%}">
+        <!-- Navigation Bar -->
+        <nav class="navbar">
+            <a href="{% url 'test' %}" class="nav-link">GET HELP</a>
+            <a href="{% url 'aboutus' %}" class="nav-link">ABOUT US</a>
+            <a href="{% url 'story' %}" class="nav-link">TALES</a>
+        </nav>
 
-            {% comment %} This is for the heading of the website  {% endcomment %}
-            <h1 class = "section1heading">STRONGER TOGETHER</h1>
+        <!-- Main Content -->
+        <div class="main-content">
+            <img class="main-icon" src="{% static 'logo.jpg' %}" alt="Logo">
+            <h1 class="main-heading">STRONGER TOGETHER</h1>
 
-            {% comment %} this is for the other part of the main page {% endcomment %}
-            <section class = "section1">
-                {% comment %} pop up div {% endcomment %}
-                <div class = "popup listen">
-                    <h1 class = "popuphead listen ">EMERGENCY</h1>
-                    <button class = "popupbut">IAM OK</button>
-                    <form class = "popupform" action = "mailto:shulavthapaliya10@gmail.com" method="post" enctype= "multipart/form-data" name ="Emailform">
-                        <input class = cont1 type = "text" placeholder = "NAME" name = "NAME" >
-                        <input class = cont1 type = "text" placeholder = "ADDRESS" name = "ADDRESS">
-                        <input class = "cont2"type = "text" placeholder = "DESCRIPTION(BREIF)" name = "DESCRIPTION">
-            
-                        <input class = "formbut"type = "submit" value = "SUBMIT">
-                        
-                    </form>
-                    
-    
-    
-    
-    
-                </div>
-                {% comment %} end of pop up div  {% endcomment %}
+            <!-- Emergency Popup -->
+            <div class="popup">
+                <h2 class="popup-heading">EMERGENCY</h2>
+                <button class="popup-button">I AM OK</button>
+                <form class="popup-form" action="mailto:shulavthapaliya10@gmail.com" method="post" enctype="multipart/form-data" name="Emailform">
+                    <input type="text" placeholder="NAME" name="NAME">
+                    <input type="text" placeholder="ADDRESS" name="ADDRESS">
+                    <textarea placeholder="DESCRIPTION(BRIEF)" name="DESCRIPTION"></textarea>
+                    <input type="submit" value="SUBMIT">
+                </form>
+            </div>
 
-                {% comment %}  This is for the main page   {% endcomment %}
-                
-                <div class = "section1div">
-                    <h1 class = "divheading change"> STRONGER TOGETHER </h1>
-                    <h1 class = "divheading"> WE ARE HERE </h1>
-                    <h1 class = "divheading"> WE ARE LISTENING </h1>
-                    <h1 class = "divheading"> WE ARE ACTIVE</h1> 
-                </div>
-            </section>
-        
-        
-
-            
+            <!-- Additional Headings -->
+            <div class="additional-headings">
+                <h2>WE ARE HERE</h2>
+                <h2>WE ARE LISTENING</h2>
+                <h2>WE ARE ACTIVE</h2>
+            </div>
         </div>
+
+        <!-- Footer (Optional) -->
+        <footer>
+            <p>&copy; 2023 Stronger Together. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script src="{% static 'style.js' %}"></script>
+    <script src="{% static 'style2.js' %}"></script>
+</body>
+
+</html>
+
             
         
 

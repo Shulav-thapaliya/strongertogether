@@ -1,49 +1,45 @@
 <!DOCTYPE html>
-{%load static %}
-
+{% load static %}
 <html>
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
+        <title>Test Page</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="{% static 'test.css'%}">
+        <link rel="stylesheet" href="{% static 'test.css' %}">
     </head>
     <body>
-        {% block content %}
         {% include 'homepage/navbar.html' %}
-        {% endblock content %}
-        <section class = "section1">
-
-            <div class = "photocont">
-                <img class = "contimg1" src = "{% static 'logo10.jpg'%}">
-                <img class = "contimg1" src = "{% static 'logo2.jpg'%}">
-                <img class = "contimg1" src = "{% static 'team.jpg'%}">
-                <img class = "contimg1" src = "{% static 'logo9.jpg'%}">
-                {% comment %} <img class = "contimg1" src = "{% static '4.jpg'%}">
-                <img class = "contimg1" src = "{% static '7.jpg'%}">
-                <img class = "contimg1" src = "{% static '8.jpg'%}">
-                <img class = "contimg1" src = "{% static '9.jpg'%}"> {% endcomment %}
-            
-            
-            </div>   
-            <div class = "formcontainer">
-                
-                <form  class = "form" action=""method= "POST">
+        <section class="section1">
+            <div class="photo-gallery">
+                <div class="img-container">
+                    <img class="gallery-img" src="{% static 'logo10.jpg' %}">
+                    <div class="overlay">Description 1</div>
+                </div>
+                <div class="img-container">
+                    <img class="gallery-img" src="{% static 'logo2.jpg' %}">
+                    <div class="overlay">Description 2</div>
+                </div>
+                <div class="img-container">
+                    <img class="gallery-img" src="{% static 'team.jpg' %}">
+                    <div class="overlay">Description 3</div>
+                </div>
+                <div class="img-container">
+                    <img class="gallery-img" src="{% static 'logo9.jpg' %}">
+                    <div class="overlay">Description 4</div>
+                </div>
+            </div>
+            <div class="form-container">
+                <h2 class="form-title">Get in Touch</h2>
+                <form class="form" action="" method="POST">
                     {% csrf_token %}
-                    
-                    {{newf}}
-                    
-                    <input class = "but" type = "submit">
-                </form> 
-            
-            </div>  
-               
-            
+                    {{ newf }}
+                    <input class="submit-btn" type="submit" value="Submit">
+                </form>
+            </div>
         </section>
-        
-        
-        <script src="" async defer></script>
     </body>
 </html>
+
+

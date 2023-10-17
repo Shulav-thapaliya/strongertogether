@@ -1,192 +1,97 @@
-        body {
-            background-color: #000;
-            background-size: cover;
-            align-items: center;
-            z-index: -1;
-        }
-        /* this is for the div for all except heading  */
-        
-        .all {
-            margin-top: 10rem;
-        }
-        
-        .master {
-            background-color: #000;
-            backdrop-filter: blur(10px);
-            z-index: -3;
-        }
-        
-        .heading {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            color: whitesmoke;
-            font-weight: 1800;
-            font-size: 10rem;
-            position: absolute;
-            right: -40rem;
-            text-shadow: 0.3rem 0.3rem 0.3rem;
-            z-index: 3;
-            filter: none;
-            filter: none;
-        }
-        
-        .storycontainer {
-            position: absolute;
-            top: 300px;
-            margin-left: 30px;
-            background-color: #000;
-            filter: none;
-            z-index: 2;
-        }
-        
-        .title {
-            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-            font-style: normal;
-            font-weight: 600;
-        }
-        
-        .par {
-            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-            font-style: normal;
-            font-weight: 400;
-        }
-        /* this is the code for the photoBoth */
-        
-        .photoBoth {
-            position: relative;
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: space-between;
-            padding: 2rem;
-            background-color: black;
-            padding: 10rem;
-            width: 50rem;
-            border-radius: 5rem;
-            margin-left: 80%;
-        }
-        /* this is for the paragraph or the story */
-        
-        .par {
-            color: black;
-            text-transform: capitalize;
-            margin-left: 2rem;
-            font-size: 1rem;
-            text-shadow: 0.3rem 0.3rem 0.3rem whitesmoke;
-            position: absolute;
-            bottom: 5rem;
-        }
-        /* this is for the icon  */
-        
-        .icon {
-            height: 10vh;
-            width: 20%;
-        }
-        /* this is for name of the storyteller */
-        
-        .title {
-            text-transform: capitalize;
-            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-            color: white;
-            font-size: 6rem;
-            margin-left: 3rem;
-            font-weight: 900;
-            text-shadow: 0.3rem 0.3rem 0.3rem black;
-        }
-        /* this is for the story  */
-        
-        .story {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            padding: 2rem;
-            color: #000;
-            filter: blur(2.5px);
-            transition: all 2s;
-            cursor: pointer;
-            position: absolute;
-            right: 10%;
-            border-radius: 1rem;
-            box-shadow: 0.3rem 0.3rem 0.3rem burlywood;
-        }
-        /* this is for the icon of the page */
-        
-        .icon2 {
-            height: 5vh;
-        }
-        
-        .story:hover {
-            filter: blur(0px);
-            transition: all 2s;
-            transform: scale(1);
-            background-color: antiquewhite;
-        }
-        /* this is for the button to display cpmment  */
-        
-        .comment {
-            position: absolute;
-            border-radius: 1rem;
-            padding: 2rem;
-            width: 10rem;
-            height: 2rem;
-            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-            font-weight: 800;
-            box-shadow: 0.3rem 0.3rem 0.3rem black;
-            background-color: white;
-            align-items: center;
-            top: 20rem;
-        }
-        /* this is for the comment container  */
-        
-        .commentContainer {
-            background-color: aliceblue;
-            position: absolute;
-            left: 50rem;
-            width: 20rem;
-            opacity: 0;
-        }
-        
-        .commentContainer.change {
-            background-color: #4E6C50;
-            align-items: center;
-            padding: 2rem;
-            opacity: 2;
-            filter: blur(2px);
-            transition: transform 2s;
-            text-transform: capitalize;
-            border-radius: 2rem;
-        }
-        
-        .commentContainer.change:hover {
-            filter: blur(0);
-            transform: scale(1.5);
-            transition: transform 3s;
-        }
-        /* this is for the comment div */
-        
-        .commentdiv {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            margin-top: 1rem;
-        }
-        
-        .comments {
-            font-size: 0.7rem;
-            font-weight: 800;
-            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-            text-shadow: 0.3rem 0.3rem 0.3rem black;
-            color: white;
-            margin-left: 1rem;
-        }
-        /* this is for the comment form  */
-        
-        .commentform {
-            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-            font-weight: 800;
-            color: white;
-            font-size: 2rem;
-            text-shadow: 0.3rem 0.3rem 0.3rem red;
-            position: absolute;
-            top: 5rem;
-            right: -30rem;
-        }
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.master {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 2rem;
+}
+
+.heading {
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #333;
+    border-bottom: 2px solid #e74c3c;
+    padding-bottom: 1rem;
+}
+
+.story-card {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+}
+
+.photo-section {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+
+.title {
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.content-section {
+    flex: 2;
+}
+
+.par {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 1rem;
+}
+
+.comment {
+    background-color: #e74c3c;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.comment:hover {
+    background-color: #c0392b;
+}
+
+.commentform {
+    display: block;
+    background-color: #e74c3c;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    text-align: center;
+    margin: 2rem auto;
+    max-width: 200px;
+}
+
+.commentform:hover {
+    background-color: #c0392b;
+}
+
+/* Responsiveness */
+@media screen and (max-width: 768px) {
+    .story-card {
+        flex-direction: column;
+    }
+}

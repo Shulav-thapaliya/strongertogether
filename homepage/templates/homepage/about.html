@@ -1,31 +1,27 @@
 <!DOCTYPE html>
-{%load static%}
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="{% static 'about.css' %}">
-    </head>
-    <body>
-        {% block content %}
-        {% include 'homepage/navbar.html' %}
-        {% endblock content %}
-        <div class = "main">
-            <h1 class = "main-head"> ABOUT US</h1>
-            <img class = "main-img" src = "{% static 'team.jpg' %}">
-            <div class = "par" >STRONGER TOGETHER is more than just an organisation - it is a safe space for EVERYONE to talk about their issues, what they believe strongly about and raise awareness while giving power to the voiceless.<br>
-                We are OPEN to EVERYONE - LGBTQ2S+ (Lesbian, Gay, Bisexual, Transgender, Queer or Questioning and Two-Spirit) Women, Men and other. <br>
-                
+{% load static %}
+<html lang="en">
 
-            </div>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>About Us</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{% static 'about.css' %}">
+</head>
+
+<body>
+    {% include 'homepage/navbar.html' %}
+
+    <div class="main">
+        <h1 class="main-head">ABOUT US</h1>
+        <img class="main-img" src="{% static 'team.jpg' %}" alt="Team Image">
+        <div class="par">
+            STRONGER TOGETHER is more than just an organisation - it is a safe space for EVERYONE to talk about their issues, what they believe strongly about, and raise awareness while giving power to the voiceless.<br>
+            We are OPEN to EVERYONE - LGBTQ2S+ (Lesbian, Gay, Bisexual, Transgender, Queer or Questioning and Two-Spirit) Women, Men, and others.
         </div>
+    </div>
+</body>
 
-
-    </body>
-        
 </html>
-
-

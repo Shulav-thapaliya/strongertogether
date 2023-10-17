@@ -1,43 +1,110 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    overflow-x: hidden;
+}
+
 .main {
     display: flex;
-    background-color: yellow;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 0;
+    background-color: #f9f9f9;
+    animation: fadeIn 1.5s;
 }
 
-.body {
-    background-color: aqua;
-}
-
-.main-img {
-    position: absolute;
-    right: 100px;
-    bottom: -200px;
-    width: 600px;
-    border-radius: 60px;
-}
-
-.par {
-    width: 50rem;
-    margin-left: 10rem;
-    position: absolute;
-    bottom: -100px;
-    size: 200px;
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 2rem;
-    letter-spacing: 0.2rem;
-    font-weight: 900;
-    text-align: center;
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 .main-head {
-    z-index: 1000;
-    position: absolute;
-    bottom: 400px;
-    right: 550px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 80px;
-    letter-spacing: 2rem;
-    font-weight: 900;
-    text-align: center;
-    text-shadow: 0.3rem 0.3rem 0.3rem;
-    color: black;
+    font-size: 2.5em;
+    color: #2c3e50;
+    margin-bottom: 30px;
+    position: relative;
+    animation: slideInFromLeft 1s ease-out;
 }
+
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.main-img {
+    width: 80%;
+    max-width: 600px;
+    border-radius: 15px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    animation: bounceIn 1s;
+}
+
+.main-img:hover {
+    transform: scale(1.05);
+}
+
+@keyframes bounceIn {
+    0% {
+        transform: scale(0.3);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 0.5;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.par {
+    width: 80%;
+    max-width: 800px;
+    font-size: 1.2em;
+    text-align: center;
+    line-height: 1.6;
+    color: #2c3e50;
+    border-left: 4px solid #e74c3c;
+    padding-left: 20px;
+    animation: slideInFromRight 1s ease-out;
+}
+
+@keyframes slideInFromRight {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Responsiveness */
+@media screen and (max-width: 768px) {
+    .main-img {
+        width: 100%;
+    }
+
+    .par {
+        font-size: 1em;
+        border-left: none;
+        padding-left: 0;
+    }
+}
+
