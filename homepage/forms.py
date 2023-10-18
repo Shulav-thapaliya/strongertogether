@@ -15,5 +15,5 @@ class Phase1form(ModelForm):
 class commentform(ModelForm):
     class Meta:
         model = comment 
-        fields = '__all__'
+        fields = ['comment']
         

@@ -2,6 +2,7 @@ from lib2to3.pgen2.token import COMMENT
 from multiprocessing import reduction
 from django.shortcuts import render ,redirect
 from .models import share
+from django.http import HttpResponseRedirect
 from .forms import Phase1form,commentform
 
 # form page (test page function)
@@ -60,7 +61,7 @@ def about(request):
 
    
 
-def com(request,pk):
+def com2(request,pk):
     # form has been added 
     
 
@@ -70,3 +71,22 @@ def com(request,pk):
     y = {'data':dataBase}
 
     return render(request,'homepage/com.html',y)
+
+def com(request, pk):
+    story_instance = share.objects.get(Privacy='Y', id=pk)
+    
+    if request.method == 'POST':
+        form = commentform(request.POST)
+        if form.is_valid():
+            comment_instance = form.save(commit=False)
+            comment_instance.share = story_instance
+            comment_instance.save()
+            return HttpResponseRedirect(request,'homepage/com.html')  # Redirect to the same page to refresh the comments
+    else:
+        form = commentform()
+
+    context = {
+        'data': story_instance,
+        'form': form
+    }
+    return render(request, 'homepage/com.html', context)

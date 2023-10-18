@@ -1,12 +1,35 @@
-<h1> hello</h1>
-{% for y in data.comment_set.all%}
+<!DOCTYPE html>
 
-    <div class = "commentdiv">
-        
-        <p class = "comments">{{y.comment}}</p><br>
-                            
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'com.css' %}">
+    <title>Comments</title>
+</head>
+<body>
+    <header class="header">
+        <h1>Stronger Together</h1>
+    </header>
+
+    <div class="comments-container">
+        <h2 class="header-title">Share Your Thoughts</h2>
+
+        <form class="comment-form" method="post">
+            {% csrf_token %}
+            <textarea name="comment" placeholder="Write your comment here..." required></textarea>
+            <button type="submit" class="submit-btn">Post Comment</button>
+        </form>
+
+        <div class="comments-section">
+            {% for y in data.comment_set.all %}
+                <div class="comment-div">
+                    <p class="comment-text">{{y.comment}}</p>
+                </div>
+            {% endfor %}
+        </div>
     </div>
-{% endfor %}
+</body>
+</html>
 
-
-<h1>{{ data.comment }}</h1>
