@@ -84,6 +84,30 @@ body {
     animation: slideInFromRight 1s ease-out;
 }
 
+/* Container for the icons */
+.social-icons {
+    display: flex;
+    justify-content: center; /* Center the icons horizontally */
+    align-items: center;     /* Center the icons vertically */
+    gap: 40px;               /* Space between the icons */
+    margin-top: 40px;        /* Space from the top */
+}
+
+/* Style for each icon link */
+.social-icons a {
+    font-size: 40px;         /* Icon size */
+    color: #333;             /* Icon color */
+    transition: color 0.3s;  /* Smooth color transition for hover effect */
+    text-decoration: none;   /* Remove underline from the link */
+}
+
+/* Hover effect for the icons */
+.social-icons a:hover {
+    color: #007BFF;          /* Change this to your desired hover color */
+}
+
+
+
 @keyframes slideInFromRight {
     0% {
         transform: translateX(100%);
